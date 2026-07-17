@@ -30,7 +30,7 @@ export const Preview = () => {
     <section id="how-it-works" ref={sectionRef} className="py-24 lg:py-32 bg-bg-surface relative border-t border-border-subtle">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-editorial mb-6">How UniFinder Helps</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-editorial mb-6">How StudyRoute Helps</h2>
           <p className="text-lg text-text-secondary">
             A simplified journey to discovering your ideal international study destination.
           </p>

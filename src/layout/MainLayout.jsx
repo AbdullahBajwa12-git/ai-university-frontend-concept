@@ -13,7 +13,7 @@ const MainLayout = () => {
         </main>
 
         <footer className="py-8 text-center text-text-secondary text-sm border-t border-border-subtle mt-20">
-          &copy; {new Date().getFullYear()} UniFinder. All rights reserved.
+          &copy; {new Date().getFullYear()} StudyRoute. All rights reserved.
         </footer>
       </div>
     </ReactLenis>

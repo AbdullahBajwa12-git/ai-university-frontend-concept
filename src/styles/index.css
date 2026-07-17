@@ -12,6 +12,10 @@
   --color-accent: #d4af37;
   --color-accent-hover: #bda038;
 
+  --color-dest-1: #60a5fa;
+  --color-dest-2: #34d399;
+  --color-dest-3: #fb7185;
+
   --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-border-focus: rgba(212, 175, 55, 0.5);
 
@@ -46,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Utilities */
 @utility glass {
-  background: rgba(22, 24, 29, 0.7);
+  background: color-mix(in srgb, var(--color-bg-surface) 70%, transparent);
   backdrop-filter: blur(12px);
   border: 1px solid var(--color-border-subtle);
 }

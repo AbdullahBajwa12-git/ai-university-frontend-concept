@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from '../../animations/gsapSetup';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
+import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.svg';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,8 +62,12 @@ export const Navbar = () => {
       <Container>
         <nav className="flex items-center justify-between h-20" aria-label="Main Navigation">
           {/* Logo */}
-          <a href="#" className="text-2xl font-editorial font-medium text-text-primary outline-none-focus rounded" onClick={closeMenu}>
-            UniFinder
+          <a href="#" className="outline-none-focus rounded flex items-center" onClick={closeMenu}>
+            <img
+              src={studyrouteLogoLight}
+              alt="StudyRoute"
+              className="w-[130px] sm:w-[145px] lg:w-[165px] h-auto object-contain"
+            />
           </a>
 
           {/* Desktop Links */}
