@@ -56,7 +56,7 @@ export const Navbar = () => {
       <Container>
         <nav className="flex items-center justify-between h-20" aria-label="Main Navigation">
           {/* Logo */}
-          <a href="#" className="outline-none-focus rounded flex items-center" onClick={closeMenu}>
+          <a href="/" className="outline-none-focus rounded flex items-center" onClick={closeMenu}>
             <img
               src={studyrouteLogoLight}
               alt="StudyRoute"
@@ -78,7 +78,15 @@ export const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <Button size="sm">Find Universities</Button>
+            <div className="flex items-center space-x-4">
+              <a
+                href="/login"
+                className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors outline-none-focus rounded px-2 py-1"
+              >
+                Sign In
+              </a>
+              <Button size="sm" onClick={() => window.location.href = 'https://studyroute.online'}>Find Universities</Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,8 +128,15 @@ export const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="pt-8 border-t border-border-subtle mt-auto">
-              <Button className="w-full" onClick={closeMenu}>
+            <div className="pt-8 border-t border-border-subtle mt-auto flex flex-col space-y-4">
+              <a
+                href="/login"
+                className="block text-center text-lg font-medium text-text-secondary hover:text-text-primary transition-colors py-2 outline-none-focus rounded"
+                onClick={closeMenu}
+              >
+                Sign In
+              </a>
+              <Button className="w-full" onClick={() => { closeMenu(); window.location.href = 'https://studyroute.online'; }}>
                 Find Universities
               </Button>
             </div>

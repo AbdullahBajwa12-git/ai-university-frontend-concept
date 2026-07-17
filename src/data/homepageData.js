@@ -50,7 +50,7 @@ export const journeyStages = [
 ];
 
 export const navLinks = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Experience', href: '#experience' },
   { label: 'Destinations', href: '#destinations' },
@@ -69,9 +69,9 @@ export const footerLinks = [
   {
     title: 'Platform',
     links: [
-      { label: 'Home', href: '#' },
+      { label: 'Home', href: '/' },
       { label: 'Student Journey', href: '#journey' },
-      { label: 'Get Started', href: '#cta' }
+      { label: 'Get Started', href: '/register' }
     ]
   },
   {

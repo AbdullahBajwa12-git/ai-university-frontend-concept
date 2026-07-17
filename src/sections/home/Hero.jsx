@@ -137,10 +137,10 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-4 lg:mb-0">
-            <Button variant="primary" size="lg" className="hero-cta">
+            <Button variant="primary" size="lg" className="hero-cta" onClick={() => window.location.href = '/register'}>
               Start Exploring
             </Button>
-            <Button variant="secondary" size="lg" className="hero-cta">
+            <Button variant="secondary" size="lg" className="hero-cta" onClick={() => { document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }}>
               See How It Works
             </Button>
           </div>
