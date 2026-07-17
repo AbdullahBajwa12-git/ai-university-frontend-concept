@@ -1,13 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3b82f6;
-  --color-dark: #0f172a;
+  --color-bg-base: #0f1115;
+  --color-bg-surface: #16181d;
+  --color-bg-surface-hover: #1f2229;
+
+  --color-text-primary: #f8f6f0;
+  --color-text-secondary: #a1a1aa;
+  --color-text-inverse: #0f1115;
+
+  --color-accent: #d4af37;
+  --color-accent-hover: #bda038;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-focus: rgba(212, 175, 55, 0.5);
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-editorial: "Newsreader", "Georgia", serif;
+
+  --spacing-container: 2rem;
+  --spacing-section: 6rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
 }
 
 body {
-  background-color: var(--color-dark);
-  color: white;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Utilities */
+@utility glass {
+  background: rgba(22, 24, 29, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility outline-none-focus {
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
 }
