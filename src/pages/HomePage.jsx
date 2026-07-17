@@ -11,7 +11,7 @@ const HomePage = () => {
   // Hero entrance animation
   useGSAP(() => {
     const tl = gsap.timeline();
-    tl.fromTo(headingRef.current, 
+    tl.fromTo(headingRef.current,
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
     ).fromTo('.hero-text',
@@ -30,7 +30,7 @@ const HomePage = () => {
       <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
         {/* Background ambient light */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-        
+
         <div className="max-w-4xl mx-auto z-10">
           <h1 ref={headingRef} className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-white">
             UniFinder Frontend Concept
@@ -75,7 +75,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Spacer to show scrolling continues */}
       <div className="h-[50vh]"></div>
     </div>
