@@ -19,6 +19,16 @@
   --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-border-focus: rgba(212, 175, 55, 0.5);
 
+  --color-globe-surface: rgba(22, 24, 29, 0.8);
+  --color-globe-grid: rgba(255, 255, 255, 0.05);
+  --color-map-land: rgba(255, 255, 255, 0.1);
+  --color-map-border: rgba(255, 255, 255, 0.15);
+  --color-pakistan-highlight: var(--color-accent);
+  --color-globe-route-smoke: rgba(255, 255, 255, 0.08);
+  --color-globe-route-vapor: rgba(255, 255, 255, 0.25);
+  --color-globe-route-highlight: rgba(255, 255, 255, 0.15);
+  --color-globe-origin-glow: rgba(212, 175, 55, 0.25);
+
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-editorial: "Newsreader", "Georgia", serif;
 
@@ -90,4 +100,29 @@ h1, h2, h3, h4, h5, h6 {
     animation: none !important;
     transform: translate3d(0, 0, 0) !important;
   }
+
+  .animate-smoke-flow,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+}
+
+/* Custom Smoke Animation */
+.animate-smoke-flow {
+  animation: smoke-flow var(--duration, 20s) linear infinite;
+}
+
+@keyframes smoke-flow {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Custom Origin Pulse */
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
 }
