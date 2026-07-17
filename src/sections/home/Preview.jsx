@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import { Container } from '../../components/layout/Container';
+import { SectionHeading } from '../../components/ui/SectionHeading';
 import { useRevealAnimation } from '../../animations/useGsapAnimation';
+import { howItWorksSteps } from '../../data/homepageData';
 
 export const Preview = () => {
   const sectionRef = useRef(null);
@@ -8,39 +10,19 @@ export const Preview = () => {
   // Use the existing reveal hook for scroll-triggered entrance
   useRevealAnimation(sectionRef);
 
-  const steps = [
-    {
-      number: '01',
-      title: 'Share your profile',
-      description: 'Enter your academic background, interests, and budget preferences.',
-    },
-    {
-      number: '02',
-      title: 'Explore suitable options',
-      description: 'Discover universities matched to your unique profile by our AI.',
-    },
-    {
-      number: '03',
-      title: 'Review clear guidance',
-      description: 'Get actionable insights on entry requirements and application steps.',
-    }
-  ];
-
   return (
-    <section id="how-it-works" ref={sectionRef} className="py-24 lg:py-32 bg-bg-surface relative border-t border-border-subtle">
+    <section id="how-it-works" ref={sectionRef} className="py-24 lg:py-32 bg-bg-surface relative border-t border-border-subtle overflow-hidden">
       <Container>
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-editorial mb-6">How StudyRoute Helps</h2>
-          <p className="text-lg text-text-secondary">
-            A simplified journey to discovering your ideal international study destination.
-          </p>
-        </div>
+        <SectionHeading
+          title="How StudyRoute Helps"
+          description="A simplified journey to discovering your ideal international study destination through curated guidance."
+        />
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 relative">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 relative mt-16">
           {/* Optional connecting line for larger screens */}
           <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-px bg-border-subtle" aria-hidden="true" />
 
-          {steps.map((step, index) => (
+          {howItWorksSteps.map((step, index) => (
             <div key={index} className="relative flex flex-col items-center text-center group">
               <div className="w-16 h-16 rounded-full bg-bg-base border border-border-subtle flex items-center justify-center text-accent font-editorial text-xl mb-6 shadow-lg relative z-10 transition-colors duration-300 group-hover:border-accent/50 group-hover:bg-bg-surface-hover">
                 {step.number}
@@ -49,6 +31,29 @@ export const Preview = () => {
               <p className="text-text-secondary leading-relaxed">
                 {step.description}
               </p>
+
+              {/* Decorative geometric shape instead of heavy external icon */}
+              <div className="mt-8 opacity-50 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
+                {step.icon === 'profile' && (
+                   <div className="w-12 h-12 rounded-lg border-2 border-dashed border-border-focus flex items-center justify-center">
+                     <div className="w-4 h-4 rounded-full bg-accent/50" />
+                   </div>
+                )}
+                {step.icon === 'explore' && (
+                   <div className="flex space-x-2">
+                     <div className="w-4 h-4 rounded-sm bg-dest-1/50" />
+                     <div className="w-4 h-4 rounded-sm bg-dest-2/50" />
+                     <div className="w-4 h-4 rounded-sm bg-accent/50" />
+                   </div>
+                )}
+                {step.icon === 'guidance' && (
+                   <div className="flex flex-col space-y-2 w-12">
+                     <div className="h-1.5 w-full bg-border-focus rounded-full" />
+                     <div className="h-1.5 w-3/4 bg-border-subtle rounded-full" />
+                     <div className="h-1.5 w-1/2 bg-border-subtle rounded-full" />
+                   </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

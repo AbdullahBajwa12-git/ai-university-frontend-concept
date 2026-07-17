@@ -4,6 +4,7 @@ import { gsap } from '../../animations/gsapSetup';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
 import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.svg';
+import { navLinks } from '../../data/homepageData';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,13 +45,6 @@ export const Navbar = () => {
       gsap.to(menuRef.current, { autoAlpha: 0, duration: 0.3, ease: 'power2.in' });
     }
   }, [isOpen]);
-
-  const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Explore', href: '#explore' },
-    { label: 'About', href: '#about' },
-  ];
 
   return (
     <header
