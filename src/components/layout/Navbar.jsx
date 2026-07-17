@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from '../../animations/gsapSetup';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
-import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.svg';
+import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.png';
 import { navLinks } from '../../data/homepageData';
 
 export const Navbar = () => {

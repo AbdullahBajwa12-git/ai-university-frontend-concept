@@ -1,5 +1,5 @@
 import { Container } from './Container';
-import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.svg';
+import studyrouteLogoLight from '../../assets/brand/studyroute-logo-light.png';
 import { footerLinks } from '../../data/homepageData';
 
 export const Footer = () => {
